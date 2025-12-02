@@ -4,10 +4,13 @@ function checkAnswer () {
     const userAnswer = document.querySelector('input[name="quiz"]:checked').value;
  
   if (userAnswer === correctAnswer) {
-    feedback.textContent("Correct! well done.");
+    document.getElementById("feedback").textContent = "Correct! well done.";
+
   } else {
-    feedback.textContent("That's incorrect. Try again!");
+    document.getElementById("feedback").textContent = "That's incorrect. Try again!";
+    
   }
+
 }
 document.getElementById("submit-answer").addEventListener("click", checkAnswer);
 
